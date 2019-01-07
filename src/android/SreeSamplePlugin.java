@@ -45,12 +45,9 @@ public class SreeSamplePlugin extends CordovaPlugin {
     }
 
     private void GeoLocation(String message, CallbackContext callbackContext) {
-      JSONObject jo = new JSONObject();
-      jo.put("Latitude", "80.2365123");
-      jo.put("Longitude", "9.2365956");
-
-      JSONArray ja = new JSONArray();
-      ja.put(jo);
-      callbackContext.success("GeoLocation success " + ja);
+      String[] strArray1 = new String[3];
+      strArray1[0] = "80.363586";
+      strArray1[1] = "90.653587";
+      callbackContext.success("GeoLocation success " + strArray1.toString());
     }
 }
