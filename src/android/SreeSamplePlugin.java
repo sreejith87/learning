@@ -45,6 +45,6 @@ public class SreeSamplePlugin extends CordovaPlugin {
     }
 
     private void GeoLocation(String message, CallbackContext callbackContext) {
-            callbackContext.success(" GeoLocation success " + message);
+            callbackContext.success("GeoLocation success " + message);
     }
 }
