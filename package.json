@@ -1,0 +1,14 @@
+{
+  "name": "sreesampleplugin",
+  "version": "1.0.0",
+  "description": "learning plugins",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "learn1"
+  ],
+  "author": "sreejith",
+  "license": "ISC"
+}
