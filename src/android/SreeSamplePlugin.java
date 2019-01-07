@@ -24,6 +24,11 @@ public class SreeSamplePlugin extends CordovaPlugin {
             this.Addition(message, callbackContext);
             return true;
         }
+        if (action.equals("GeoLocation")) {
+            String message = args.getString(0);
+            this.Addition(message, callbackContext);
+            return true;
+        }
         return false;
     }
 
@@ -37,5 +42,9 @@ public class SreeSamplePlugin extends CordovaPlugin {
 
     private void Addition(String message, CallbackContext callbackContext) {
             callbackContext.success(" Addition success : " + message);
+    }
+
+    private void GeoLocation(String message, CallbackContext callbackContext) {
+            callbackContext.success(" GeoLocation success " + message);
     }
 }
