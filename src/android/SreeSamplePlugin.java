@@ -1,4 +1,4 @@
-package cordova-plugin-sreesampleplugin;
+package cordova.plugin.sreesampleplugin;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
