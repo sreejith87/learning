@@ -26,7 +26,7 @@ public class SreeSamplePlugin extends CordovaPlugin {
         }
         if (action.equals("GeoLocation")) {
             String message = args.getString(0);
-            this.Addition(message, callbackContext);
+            this.GeoLocation(message, callbackContext);
             return true;
         }
         return false;
@@ -45,6 +45,12 @@ public class SreeSamplePlugin extends CordovaPlugin {
     }
 
     private void GeoLocation(String message, CallbackContext callbackContext) {
-            callbackContext.success("GeoLocation success " + message);
+      JSONObject jo = new JSONObject();
+      jo.put("Latitude", "80.2365123");
+      jo.put("Longitude", "9.2365956");
+
+      JSONArray ja = new JSONArray();
+      ja.put(jo);
+      callbackContext.success("GeoLocation success " + ja);
     }
 }
