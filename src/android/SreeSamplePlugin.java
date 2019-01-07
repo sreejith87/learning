@@ -36,6 +36,6 @@ public class SreeSamplePlugin extends CordovaPlugin {
     }
 
     private void Addition(String message, CallbackContext callbackContext) {
-            callbackContext.success('Addition success : ' + message);
+            callbackContext.success(" Addition success : " + message);
     }
 }
