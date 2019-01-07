@@ -46,6 +46,6 @@ public class SreeSamplePlugin extends CordovaPlugin {
 
     private void GeoLocation(String message, CallbackContext callbackContext) {
       String latlon = "['80.9256368','90.365696']";
-      callbackContext.success("GeoLocation success " + latlon);
+      callbackContext.success(latlon);
     }
 }
