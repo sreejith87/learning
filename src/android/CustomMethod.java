@@ -18,7 +18,14 @@ import javax.security.auth.callback.Callback;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import com.google.android.gms.location.LocationServices;
+import android.content.Context;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.location.LocationProvider;
+import android.os.Bundle;
+import android.os.Looper;
+import android.util.Log;
 
 /**
  * This class echoes a string called from JavaScript.
