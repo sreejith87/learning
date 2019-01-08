@@ -18,6 +18,7 @@ import javax.security.auth.callback.Callback;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import com.google.android.gms.location.LocationServices;
 
 /**
  * This class echoes a string called from JavaScript.
