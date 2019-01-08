@@ -11,3 +11,7 @@ module.exports.Addition = function (arg0, success, error) {
 module.exports.GeoLocation = function (arg0, success, error) {
     exec(success, error, 'SreeSamplePlugin', 'GeoLocation', [arg0]);
 };
+
+module.exports.GetAdditionInfo = function (arg0, success, error) {
+    exec(success, error, 'SreeSamplePlugin', 'GetAdditionInfo', [arg0]);
+};
