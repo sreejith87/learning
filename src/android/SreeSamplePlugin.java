@@ -68,14 +68,15 @@ public class SreeSamplePlugin extends CordovaPlugin {
     }
 
     private void CallCustomFunction(String message, CallbackContext callbackContext) {
-        try{
-            CustomMethod cm = new CustomMethod();
-            String retval = cm.GetAdditionInfo();
-            callbackContext.success(retval);
-        }     
-        catch(Exception exc)    {
-            callbackContext.success("exception occoured");
-        }
+        // try{
+        //     CustomMethod cm = new CustomMethod();
+        //     String retval = cm.GetAdditionInfo();
+        //     callbackContext.success(retval);
+        // }     
+        // catch(Exception exc)    {
+        //     callbackContext.success("exception occoured");
+        // }
+        callbackContext.success("oh no");
     }
 
 
