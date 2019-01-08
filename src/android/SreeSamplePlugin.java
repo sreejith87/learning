@@ -74,7 +74,7 @@ public class SreeSamplePlugin extends CordovaPlugin {
             callbackContext.success(retval);
         }
         catch(exc) {
-            callbackContext.error(exc.toString());
+            callbackContext.error("error from call custom function");
         }
     }
 
