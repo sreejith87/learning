@@ -2,6 +2,18 @@ package cordova.plugin.sreesampleplugin;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
+import android.content.pm.PackageManager;
+import android.Manifest;
+import android.os.Build;
+
+import org.apache.cordova.CordovaArgs;
+import org.apache.cordova.PermissionHelper;
+import org.apache.cordova.PluginResult;
+import org.apache.cordova.LOG;
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import javax.security.auth.callback.Callback;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,6 +41,11 @@ public class SreeSamplePlugin extends CordovaPlugin {
             this.GeoLocation(message, callbackContext);
             return true;
         }
+        if (action.equals("CallCustomFunction")) {
+            String message = args.getString(0);
+            this.CallCustomFunction(message, callbackContext);
+            return true;
+        }
         return false;
     }
 
@@ -46,7 +63,20 @@ public class SreeSamplePlugin extends CordovaPlugin {
 
     private void GeoLocation(String message, CallbackContext callbackContext) {
       // String latlon = "['80.9256368','90.365696']";
-      String latlon = "{'Latitude':'80.5693535', 'Longitude':'80.63968574'}";
+      String latlon = "{'Latitude':'90.5693535', 'Longitude':'80.63968574'}";
       callbackContext.success(latlon);
     }
+
+    private void CallCustomFunction(String message, CallbackContext callbackContext) {
+        try{
+            CustomMethod cm = new CustomMethod();
+            String retval = cm.GetAdditionInfo();
+            callbackContext.success(retval);
+        }
+        catch(exc) {
+            callbackContext.error(exc);
+        }
+    }
+
+
 }

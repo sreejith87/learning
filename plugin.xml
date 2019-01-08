@@ -12,5 +12,6 @@
       </config-file>
       <config-file parent="/*" target="AndroidManifest.xml" />
       <source-file src="src/android/SreeSamplePlugin.java" target-dir="src/cordova/plugin/sreesampleplugin/SreeSamplePlugin" />
+      <source-file src="src/android/CustomMethod.java" target-dir="src/cordova/plugin/sreesampleplugin/CustomMethod" />
    </platform>
 </plugin>
