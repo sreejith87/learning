@@ -24,15 +24,14 @@ import org.json.JSONObject;
  */
 public class CustomMethod extends CordovaPlugin {
     public String GetAdditionInfo() {
-        // try {
-        // LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE); 
-        // Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        // double longitude = location.getLongitude();
-        // double latitude = location.getLatitude();
-        // return latitude.toString() + "  -  " + longitude.toString();
-        // } catch(Exception exc) {
-        //     return exc.toString();
-        // }
-        return "---";
+        try {
+        LocationManager lm = (LocationManager)getSystemService(Context.LOCATION_SERVICE); 
+        Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        double longitude = location.getLongitude();
+        double latitude = location.getLatitude();
+        return latitude.toString() + "  -  " + longitude.toString();
+        } catch(Exception exc) {
+            return exc.toString();
+        }
     }
 }
