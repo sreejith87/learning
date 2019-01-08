@@ -12,6 +12,6 @@ module.exports.GeoLocation = function (arg0, success, error) {
     exec(success, error, 'SreeSamplePlugin', 'GeoLocation', [arg0]);
 };
 
-module.exports.CallCustomFunction = function (arg0, success, error) {
+module.exports.CallCustomFunction = function  (arg0, success, error) {
     exec(success, error, 'SreeSamplePlugin', 'CallCustomFunction', [arg0]);
 };

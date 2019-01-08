@@ -29,7 +29,7 @@ public class CustomMethod extends CordovaPlugin {
         Location location = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         double longitude = location.getLongitude();
         double latitude = location.getLatitude();
-        return latitude.toString() + " - " + longitude.toString();
+        return latitude.toString() + "  -  " + longitude.toString();
         } catch(Exception exc) {
             return exc.toString();
         }
