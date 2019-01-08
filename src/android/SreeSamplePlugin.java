@@ -74,7 +74,7 @@ public class SreeSamplePlugin extends CordovaPlugin {
             callbackContext.success(retval);
         }     
         catch(Exception exc)    {
-            callbackContext.error("exception occoured");
+            callbackContext.success("exception occoured");
         }
     }
 
